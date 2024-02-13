@@ -3,14 +3,14 @@ const gototop = document.querySelector(".gototop");
 const like = document.querySelector(".like");
 const logo = document.querySelector("#logo");
 const trigger = document.querySelector(".trigger");
-const gnbMobile = document.querySelectorAll("#gnb");
+const gnbMobile = document.querySelector(".gnb");
 
 console.log(logo);
 
 // mobile gnb
 trigger.addEventListener("click", () => {
-  gnb.classList.toggle("active");
   trigger.classList.toggle("active");
+  gnbMobile.classList.toggle("active");
 });
 
 // gnb 컬러 변경
@@ -75,19 +75,30 @@ like.addEventListener("click", () => {
   like.classList.toggle("active");
 });
 
-// jQuery
+// video slide
+const video = document.querySelector(".video-type-mobile");
+const arrows = document.querySelectorAll(".arrow");
+const vids = ["v1.mp4", "v2.mp4", "v3.mp4", "v4.mp4"];
 
-// scrollTo
-// $("a").click(function (e) {
-//   $.scrollTo(this.hash || 0, 1200);
-//   e.preventDefault();
-// });
+// video.style.backgroundSize = "cover";
+// video.style.backgroundPosition = "center";
+video.src = `url(./video/${vids[0]})`;
 
-// wow
-let wow = new WOW({
-  boxClass: "wow",
-  offset: 120,
-  mobile: false,
-  live: true,
+let i = 0;
+
+arrows.forEach((arrow) => {
+  arrow.addEventListener("click", (e) => {
+    if (e.target.id === "left") {
+      i--;
+      if (i < 0) {
+        i = vids.length - 1;
+      }
+    } else if (e.target.id === "right") {
+      i++;
+      if (i >= vids.length) {
+        i = 0;
+      }
+    }
+    video.src = `url(./video/${vids[i]})`;
+  });
 });
-wow.init();
