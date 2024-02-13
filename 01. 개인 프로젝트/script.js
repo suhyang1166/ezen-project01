@@ -2,8 +2,16 @@ const gnb = document.querySelector("#main-bar");
 const gototop = document.querySelector(".gototop");
 const like = document.querySelector(".like");
 const logo = document.querySelector("#logo");
+const trigger = document.querySelector(".trigger");
+const gnbMobile = document.querySelectorAll("#gnb");
 
 console.log(logo);
+
+// mobile gnb
+trigger.addEventListener("click", () => {
+  gnb.classList.toggle("active");
+  trigger.classList.toggle("active");
+});
 
 // gnb 컬러 변경
 window.addEventListener("scroll", () => {
