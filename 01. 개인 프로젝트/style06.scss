@@ -281,3 +281,196 @@ body {
     }
   }
 }
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  #selfintro {
+    width: 360px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    .heading {
+      height: 120px;
+      .close {
+        i {
+          font-size: 30px;
+        }
+      }
+      .outline {
+        width: 80px;
+        height: 80px;
+        left: 30px;
+        .inner {
+          width: 70px;
+          height: 70px;
+        }
+      }
+      .name {
+        position: absolute;
+        top: 50%;
+        left: 130px;
+        transform: translateY(-50%);
+        font: {
+          family: gm B;
+          size: 18px;
+        }
+      }
+    }
+    .pics {
+      width: 360px;
+      height: 100%;
+      .pic-content {
+        width: inherit;
+        height: 450px;
+      }
+      .text-content {
+        // border: 1px solid #f00;
+        padding: 10px;
+        .like02 {
+          // border: 1px solid #0f0;
+          width: 40px;
+          height: 40px;
+          transition: all 0.3s;
+          &:hover {
+            transform: scale(1.1);
+          }
+          &::before {
+            content: "\f08a";
+            font: {
+              family: fontawesome;
+              size: 40px;
+            }
+            color: #fff;
+            cursor: pointer;
+          }
+          &.active::before {
+            content: "\f004";
+            text-shadow: 0 0 20px #f00;
+            color: #f00;
+            transform: scale(1.1);
+          }
+        }
+        .like-text {
+          margin-top: 10px;
+          font: {
+            size: 16px;
+            family: gm M;
+          }
+          &::before {
+            content: "좋아요 329개";
+          }
+          &.active::before {
+            content: "좋아요 330개";
+          }
+        }
+        div {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 10px;
+          p {
+            font: {
+              size: 16px;
+              family: gm L;
+            }
+            margin-top: 0;
+          }
+          p:nth-child(1) {
+            font-family: gm M;
+            font-size: 14px;
+            line-height: 24px;
+          }
+          .shortText {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 14px;
+          }
+          .plus {
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 22px;
+          }
+          .hide-content {
+            width: 360px;
+            line-height: 18px;
+            display: none;
+            font-size: 14px;
+          }
+          .shortText.active,
+          .plus.active {
+            opacity: 0;
+          }
+          .hide-content.active {
+            display: block;
+            width: 600px;
+          }
+        }
+        p {
+          font: {
+            size: 14px;
+            family: gm L;
+          }
+          margin-top: 30px;
+          span {
+            font-family: gm M;
+            line-height: 30px;
+            font-size: 12px;
+          }
+        }
+      }
+      .bottom-bar {
+        width: 360px;
+        height: 80px;
+        border-top: 1px solid #555;
+        margin-top: 30px;
+        ul {
+          li {
+            width: 72px;
+            height: 80px;
+            &:nth-child(3) span {
+              font-size: 30px;
+            }
+            &:nth-child(4)::before {
+              content: "\f08a";
+              font: {
+                family: fontawesome;
+                size: 30px;
+              }
+              color: #fff;
+              cursor: pointer;
+            }
+            &:nth-child(4).active::before {
+              content: "\f004";
+              text-shadow: 0 0 20px #f00;
+              color: #f00;
+              transform: scale(1.1);
+              z-index: 50;
+            }
+            &:last-child {
+              .outline {
+                width: 40px;
+                height: 40px;
+                border: 1px solid transparent;
+                position: absolute;
+                top: 22px;
+                left: 50%;
+                .inner {
+                  position: absolute;
+                  top: 19px;
+                  left: 50%;
+                  width: 35px;
+                  height: 35px;
+                }
+              }
+            }
+            span {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

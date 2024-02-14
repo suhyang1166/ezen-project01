@@ -111,3 +111,32 @@ like.addEventListener("click", () => {
 //     video.src = `url(./video/${vids[i]})`;
 //   });
 // });
+
+// img slide
+const container = document.querySelector(".last-pics");
+const arrows = document.querySelectorAll(".arrow");
+const pics = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"];
+
+container.style.backgroundSize = "contain";
+container.style.backgroundPosition = "center";
+container.style.backgroundRepeat = "no-repeat";
+container.style.backgroundImage = `url(./img/concept/${pics[0]})`;
+
+let i = 0;
+
+arrows.forEach((arrow) => {
+  arrow.addEventListener("click", (e) => {
+    if (e.target.id === "left") {
+      i--;
+      if (i < 0) {
+        i = pics.length - 1;
+      }
+    } else if (e.target.id === "right") {
+      i++;
+      if (i >= pics.length) {
+        i = 0;
+      }
+    }
+    container.style.backgroundImage = `url(./img/concept/${pics[i]})`;
+  });
+});

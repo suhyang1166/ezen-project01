@@ -358,4 +358,171 @@ body {
 }
 #selfintro .pics .bottom-bar ul li span {
   font-size: 60px;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  #selfintro {
+    width: 360px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+  }
+  #selfintro .heading {
+    height: 120px;
+  }
+  #selfintro .heading .close i {
+    font-size: 30px;
+  }
+  #selfintro .heading .outline {
+    width: 80px;
+    height: 80px;
+    left: 30px;
+  }
+  #selfintro .heading .outline .inner {
+    width: 70px;
+    height: 70px;
+  }
+  #selfintro .heading .name {
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+    font-family: gm B;
+    font-size: 18px;
+  }
+  #selfintro .pics {
+    width: 360px;
+    height: 100%;
+  }
+  #selfintro .pics .pic-content {
+    width: inherit;
+    height: 450px;
+  }
+  #selfintro .pics .text-content {
+    padding: 10px;
+  }
+  #selfintro .pics .text-content .like02 {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+  }
+  #selfintro .pics .text-content .like02:hover {
+    transform: scale(1.1);
+  }
+  #selfintro .pics .text-content .like02::before {
+    content: "\f08a";
+    font-family: fontawesome;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+  }
+  #selfintro .pics .text-content .like02.active::before {
+    content: "\f004";
+    text-shadow: 0 0 20px #f00;
+    color: #f00;
+    transform: scale(1.1);
+  }
+  #selfintro .pics .text-content .like-text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: gm M;
+  }
+  #selfintro .pics .text-content div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  #selfintro .pics .text-content div p {
+    font-size: 16px;
+    font-family: gm L;
+    margin-top: 0;
+  }
+  #selfintro .pics .text-content div p:nth-child(1) {
+    font-family: gm M;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  #selfintro .pics .text-content div .shortText {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  #selfintro .pics .text-content div .plus {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  #selfintro .pics .text-content div .hide-content {
+    width: 360px;
+    line-height: 18px;
+    display: none;
+    font-size: 14px;
+  }
+  #selfintro .pics .text-content div .shortText.active,
+  #selfintro .pics .text-content div .plus.active {
+    opacity: 0;
+  }
+  #selfintro .pics .text-content div .hide-content.active {
+    display: block;
+    width: 600px;
+  }
+  #selfintro .pics .text-content p {
+    font-size: 14px;
+    font-family: gm L;
+    margin-top: 30px;
+  }
+  #selfintro .pics .text-content p span {
+    font-family: gm M;
+    line-height: 30px;
+    font-size: 12px;
+  }
+  #selfintro .pics .bottom-bar {
+    width: 360px;
+    height: 80px;
+    border-top: 1px solid #555;
+    margin-top: 30px;
+  }
+  #selfintro .pics .bottom-bar ul li {
+    width: 72px;
+    height: 80px;
+  }
+  #selfintro .pics .bottom-bar ul li:nth-child(3) span {
+    font-size: 30px;
+  }
+  #selfintro .pics .bottom-bar ul li:nth-child(4)::before {
+    content: "\f08a";
+    font-family: fontawesome;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  #selfintro .pics .bottom-bar ul li:nth-child(4).active::before {
+    content: "\f004";
+    text-shadow: 0 0 20px #f00;
+    color: #f00;
+    transform: scale(1.1);
+    z-index: 50;
+  }
+  #selfintro .pics .bottom-bar ul li:last-child .outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+  }
+  #selfintro .pics .bottom-bar ul li:last-child .outline .inner {
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+  }
+  #selfintro .pics .bottom-bar ul li span {
+    font-size: 40px;
+  }
 }/*# sourceMappingURL=style07.css.map */
