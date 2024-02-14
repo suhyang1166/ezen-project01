@@ -4,6 +4,7 @@ const like = document.querySelector(".like");
 const logo = document.querySelector("#logo");
 const trigger = document.querySelector(".trigger");
 const gnbMobile = document.querySelector(".gnb");
+const gnbA = document.querySelector(".gnb li a");
 
 console.log(logo);
 
@@ -11,6 +12,11 @@ console.log(logo);
 trigger.addEventListener("click", () => {
   trigger.classList.toggle("active");
   gnbMobile.classList.toggle("active");
+});
+
+gnbA.addEventListener("click", () => {
+  gnbMobile.classList.remove("active");
+  trigger.classList.remove("active");
 });
 
 // gnb 컬러 변경
@@ -76,29 +82,32 @@ like.addEventListener("click", () => {
 });
 
 // video slide
-const video = document.querySelector(".video-type-mobile");
-const arrows = document.querySelectorAll(".arrow");
-const vids = ["v1.mp4", "v2.mp4", "v3.mp4", "v4.mp4"];
+// const video = document.querySelector(".video-slide");
+// const arrows = document.querySelectorAll(".arrow");
+// const vids = ["v1.mp4", "v2.mp4", "v3.mp4", "v4.mp4"];
 
-// video.style.backgroundSize = "cover";
-// video.style.backgroundPosition = "center";
-video.src = `url(./video/${vids[0]})`;
+// // video.style.backgroundSize = "cover";
+// // video.style.backgroundPosition = "center";
+// // video.style.backgroundImage = `url(./video/${vids[0]})`;
+// video.src = `url(./video/${vids[0]})`;
 
-let i = 0;
+// let i = 0;
 
-arrows.forEach((arrow) => {
-  arrow.addEventListener("click", (e) => {
-    if (e.target.id === "left") {
-      i--;
-      if (i < 0) {
-        i = vids.length - 1;
-      }
-    } else if (e.target.id === "right") {
-      i++;
-      if (i >= vids.length) {
-        i = 0;
-      }
-    }
-    video.src = `url(./video/${vids[i]})`;
-  });
-});
+// arrows.forEach((arrow) => {
+//   arrow.addEventListener("click", (e) => {
+//     console.log("click");
+//     if (e.target.id === "left") {
+//       i--;
+//       if (i < 0) {
+//         i = vids.length - 1;
+//       }
+//     } else if (e.target.id === "right") {
+//       i++;
+//       if (i >= vids.length) {
+//         i = 0;
+//       }
+//     }
+//     // video.style.backgroundImage = `url(./video/${vids[i]})`;
+//     video.src = `url(./video/${vids[i]})`;
+//   });
+// });

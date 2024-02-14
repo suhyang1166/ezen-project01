@@ -77,20 +77,20 @@ arrows.forEach((arrow) => {
 const textUp = document.querySelector(".text-up");
 const message = document.querySelector("#container");
 const messageHide = document.querySelector("#container p");
-const title = document.querySelector("#title");
-const author = document.querySelector("#author");
+const name = document.querySelector("#name");
+const text = document.querySelector("#text");
 const save = document.querySelector("#save");
-const bookList = document.querySelector("#booklist");
+const textList = document.querySelector("#textlist");
 
 save.addEventListener("click", (e) => {
   e.preventDefault();
 
   const item = document.createElement("li");
-  item.innerHTML = `${title.value} - ${author.value} <button class="delButton">삭제</button>`;
-  bookList.appendChild(item);
+  item.innerHTML = `${name.value} - ${text.value} <button class="delButton">삭제</button>`;
+  textList.appendChild(item);
 
-  title.value = "";
-  author.value = "";
+  name.value = "";
+  text.value = "";
 
   const delButtons = document.querySelectorAll(".delButton");
   for (let delButton of delButtons) {
