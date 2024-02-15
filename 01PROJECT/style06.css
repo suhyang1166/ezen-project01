@@ -173,9 +173,11 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin-top: 23px;
 }
 #selfintro .pics .text-content div .plus {
   cursor: pointer;
+  margin-bottom: 3px;
 }
 #selfintro .pics .text-content div .hide-content {
   line-height: 30px;
@@ -366,6 +368,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     font-size: 14px;
+    margin-top: 0;
   }
   #selfintro .pics .text-content div .plus {
     cursor: pointer;

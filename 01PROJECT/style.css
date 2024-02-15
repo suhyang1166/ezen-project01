@@ -134,7 +134,7 @@ body {
   }
 }
 /* tablet */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1279px) {
   #wrap {
     height: auto;
     display: flex;
