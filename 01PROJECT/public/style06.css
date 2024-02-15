@@ -1,0 +1,447 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: gm B;
+  src: url(./font/GmarketSansTTFBold.ttf);
+}
+@font-face {
+  font-family: gm M;
+  src: url(./font/GmarketSansTTFMedium.ttf);
+}
+@font-face {
+  font-family: gm L;
+  src: url(./font/GmarketSansTTFLight.ttf);
+}
+/* common */
+body {
+  font-family: gm L;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  background: #000;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+#selfintro {
+  width: 900px;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+#selfintro .heading {
+  width: 100%;
+  padding: 0 40px;
+  height: 200px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#selfintro .heading .close {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+}
+#selfintro .heading .outline {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  width: 110px;
+  height: 110px;
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(-140deg, #634edd, #eb3b9b, #fe4743, #fed06a) border-box;
+  border-radius: 100%;
+}
+#selfintro .heading .outline .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95px;
+  height: 95px;
+  border-radius: 100%;
+  background: url(./img/sh.png) center/cover no-repeat;
+}
+#selfintro .heading .name {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+  font-family: gm B;
+  font-size: 22px;
+}
+#selfintro .pics {
+  width: 900px;
+  height: 100%;
+}
+#selfintro .pics .pic-content {
+  width: 900px;
+  height: 900px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#selfintro .pics .pic-content .arrow {
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  font-size: 2rem;
+  padding: 10px;
+  opacity: 0.1;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#selfintro .pics .pic-content .arrow:hover {
+  opacity: 1;
+}
+#selfintro .pics .text-content {
+  padding: 30px;
+}
+#selfintro .pics .text-content .like02 {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s;
+}
+#selfintro .pics .text-content .like02:hover {
+  transform: scale(1.1);
+}
+#selfintro .pics .text-content .like02::before {
+  content: "\f08a";
+  font-family: fontawesome;
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
+}
+#selfintro .pics .text-content .like02.active::before {
+  content: "\f004";
+  text-shadow: 0 0 20px #f00;
+  color: #f00;
+  transform: scale(1.1);
+}
+#selfintro .pics .text-content .like-text {
+  margin-top: 20px;
+  font-size: 22px;
+  font-family: gm M;
+}
+#selfintro .pics .text-content .like-text::before {
+  content: "좋아요 329개";
+}
+#selfintro .pics .text-content .like-text.active::before {
+  content: "좋아요 330개";
+}
+#selfintro .pics .text-content div {
+  font-size: 22px;
+  font-family: gm L;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  grid-gap: 15px;
+}
+#selfintro .pics .text-content div p:nth-child(1) {
+  font-family: gm M;
+}
+#selfintro .pics .text-content div .shortText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 23px;
+}
+#selfintro .pics .text-content div .plus {
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+#selfintro .pics .text-content div .hide-content {
+  line-height: 30px;
+  display: none;
+}
+#selfintro .pics .text-content div .shortText.active,
+#selfintro .pics .text-content div .plus.active {
+  opacity: 0;
+}
+#selfintro .pics .text-content div .hide-content.active {
+  display: block;
+  width: 600px;
+  margin-bottom: 20px;
+}
+#selfintro .pics .text-content p {
+  font-size: 22px;
+  font-family: gm L;
+  margin-top: 30px;
+}
+#selfintro .pics .text-content p span {
+  font-family: gm M;
+  line-height: 50px;
+  font-size: 18px;
+}
+#selfintro .pics .bottom-bar {
+  width: 900px;
+  height: 120px;
+  border-top: 1px solid #555;
+  margin-top: 100px;
+}
+#selfintro .pics .bottom-bar ul {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+}
+#selfintro .pics .bottom-bar ul li {
+  width: 180px;
+  height: 120px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+#selfintro .pics .bottom-bar ul li:nth-child(3) span {
+  font-size: 50px;
+  border: 3px solid #fff;
+  border-radius: 15px;
+}
+#selfintro .pics .bottom-bar ul li:nth-child(4)::before {
+  content: "\f08a";
+  font-family: fontawesome;
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
+}
+#selfintro .pics .bottom-bar ul li:nth-child(4).active::before {
+  content: "\f004";
+  text-shadow: 0 0 20px #f00;
+  color: #f00;
+  transform: scale(1.1);
+  z-index: 50;
+}
+#selfintro .pics .bottom-bar ul li:last-child {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#selfintro .pics .bottom-bar ul li:last-child .outline {
+  width: 60px;
+  height: 60px;
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(-140deg, #634edd, #eb3b9b, #fe4743, #fed06a) border-box;
+  border-radius: 100%;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#selfintro .pics .bottom-bar ul li:last-child .outline .inner {
+  position: absolute;
+  top: 29px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: url(./img/sh.png) center/cover no-repeat;
+  border-radius: 100%;
+}
+#selfintro .pics .bottom-bar ul li span {
+  font-size: 60px;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  #selfintro {
+    width: 360px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+  }
+  #selfintro .heading {
+    height: 120px;
+  }
+  #selfintro .heading .close i {
+    font-size: 30px;
+  }
+  #selfintro .heading .outline {
+    width: 80px;
+    height: 80px;
+    left: 30px;
+  }
+  #selfintro .heading .outline .inner {
+    width: 70px;
+    height: 70px;
+  }
+  #selfintro .heading .name {
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+    font-family: gm B;
+    font-size: 18px;
+  }
+  #selfintro .pics {
+    width: 360px;
+    height: 100%;
+  }
+  #selfintro .pics .pic-content {
+    width: inherit;
+    height: 400px;
+  }
+  #selfintro .pics .text-content {
+    padding: 10px;
+  }
+  #selfintro .pics .text-content .like02 {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+  }
+  #selfintro .pics .text-content .like02:hover {
+    transform: scale(1.1);
+  }
+  #selfintro .pics .text-content .like02::before {
+    content: "\f08a";
+    font-family: fontawesome;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+  }
+  #selfintro .pics .text-content .like02.active::before {
+    content: "\f004";
+    text-shadow: 0 0 20px #f00;
+    color: #f00;
+    transform: scale(1.1);
+  }
+  #selfintro .pics .text-content .like-text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: gm M;
+  }
+  #selfintro .pics .text-content .like-text::before {
+    content: "좋아요 329개";
+  }
+  #selfintro .pics .text-content .like-text.active::before {
+    content: "좋아요 330개";
+  }
+  #selfintro .pics .text-content div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  #selfintro .pics .text-content div p {
+    font-size: 16px;
+    font-family: gm L;
+    margin-top: 0;
+  }
+  #selfintro .pics .text-content div p:nth-child(1) {
+    font-family: gm M;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  #selfintro .pics .text-content div .shortText {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    margin-top: 0;
+  }
+  #selfintro .pics .text-content div .plus {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  #selfintro .pics .text-content div .hide-content {
+    width: 360px;
+    line-height: 18px;
+    display: none;
+    font-size: 14px;
+  }
+  #selfintro .pics .text-content div .shortText.active,
+  #selfintro .pics .text-content div .plus.active {
+    opacity: 0;
+  }
+  #selfintro .pics .text-content div .hide-content.active {
+    display: block;
+    width: 600px;
+  }
+  #selfintro .pics .text-content p {
+    font-size: 14px;
+    font-family: gm L;
+    margin-top: 30px;
+  }
+  #selfintro .pics .text-content p span {
+    font-family: gm M;
+    line-height: 30px;
+    font-size: 12px;
+  }
+  #selfintro .pics .bottom-bar {
+    width: 360px;
+    height: 80px;
+    border-top: 1px solid #555;
+    margin-top: 30px;
+  }
+  #selfintro .pics .bottom-bar ul li {
+    width: 72px;
+    height: 80px;
+  }
+  #selfintro .pics .bottom-bar ul li:nth-child(3) span {
+    font-size: 30px;
+  }
+  #selfintro .pics .bottom-bar ul li:nth-child(4)::before {
+    content: "\f08a";
+    font-family: fontawesome;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  #selfintro .pics .bottom-bar ul li:nth-child(4).active::before {
+    content: "\f004";
+    text-shadow: 0 0 20px #f00;
+    color: #f00;
+    transform: scale(1.1);
+    z-index: 50;
+  }
+  #selfintro .pics .bottom-bar ul li:last-child .outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+  }
+  #selfintro .pics .bottom-bar ul li:last-child .outline .inner {
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+  }
+  #selfintro .pics .bottom-bar ul li span {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=style06.css.map */

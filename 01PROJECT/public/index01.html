@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 파비콘 -->
+    <link rel="icon" href="./img/ghiblilogo.png" />
+    <!-- jQuery -->
+    <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://kit.fontawesome.com/7b09c8acb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="./style01.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <script defer src="./script.js"></script>
+    <title>Hyang's ♡</title>
+  </head>
+  <body>
+    <!-- gnb/video page -->
+    <section id="first">
+      <div class="bg"></div>
+      <nav id="main-bar">
+        <div class="bar-list">
+          <a id="logo" href="./index.html" data-featherlight="iframe"></a>
+          <div>
+            <a href="#third" data-text="PROFILE">PROFILE</a>
+            <a href="#fifth" data-text="CONTENTS">CONTENTS</a>
+            <a href="#ninth" data-text="GOAL">GOAL</a>
+            <a href="#eleventh" data-text="CONTACT">CONTACT</a>
+          </div>
+          <ul class="gnb">
+            <li><a href="#third" data-text="PROFILE">PROFILE</a></li>
+            <li><a href="#fifth" data-text="CONTENTS">CONTENT</a></li>
+            <li><a href="#ninth" data-text="GOAL">GOAL</a></li>
+            <li><a href="#eleventh" data-text="CONTACT">CONTACT</a></li>
+          </ul>
+          <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+      <article id="contents-box">
+        <a href="#second" class="nav-btn">
+          <h1>WHO AM I?</h1>
+          <div class="video-type">
+            <video src="./video/v1.mp4" autoplay muted loop></video>
+            <video src="./video/v2.mp4" autoplay muted loop></video>
+            <video src="./video/v3.mp4" autoplay muted loop></video>
+            <video src="./video/v4.mp4" autoplay muted loop></video>
+          </div>
+        </a>
+        <div class="video-type-mobile">
+          <div id="left" class="fa-solid fa-chevron-left arrow"></div>
+          <video
+            class="video-slide"
+            src="./video/v2.mp4"
+            autoplay
+            muted
+            loop
+            poster="./img/go-bg.jpg"
+          ></video>
+          <div id="right" class="fa-solid fa-chevron-right arrow"></div>
+        </div>
+        <div class="gra-box">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="gra-box-mobile">
+          <span></span>
+        </div>
+      </article>
+      <div id="top-logo">
+        <a href="#" class="fas fa-arrow-up"></a>
+      </div>
+    </section>
+
+    <!-- intro page -->
+    <section id="second">
+      <article class="hello-content">
+        <a href="#third" id="third-move">
+          <h1 class="text-ani"></h1>
+        </a>
+        <div class="phone-box">
+          <div></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 소개 페이지 -->
+    <section id="third">
+      <article class="hello-content">
+        <a href="#fourth" class="nav-btn">
+          <div class="phone-box">
+            <div></div>
+          </div>
+        </a>
+        <div class="my-content">
+          <p>HELLO, I’m</p>
+          <p>
+            50여개의 다양한 프로젝트의 경험으로<br />확실한 책임감과 유연한
+            사고를 가진<br /><b>“김 수 향”</b> 입니다!
+          </p>
+          <div class="work">
+            <p>1997.10.06 Jeju</p>
+            <p>Education<br />2018 명지전문대 뷰티매니지먼트과 졸업</p>
+            <p>
+              Work<br />2018-2019 메이크업 아티스트 / 퍼스널컬러 보조강사
+              <br />2019-2023 건축 특화 디자이너
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 말풍선 페이지 01 -->
+    <section id="fourth">
+      <div class="emoji">
+        <img class="emo-img" src="./img/e1.png" alt="emo1" />
+        <div class="messages-01">
+          <img class="vector-wh" src="./img/wh.png" alt="vector-wh" />
+          <article class="message-long">
+            <div><span>"나"</span>는 누구인가요?</div>
+          </article>
+        </div>
+      </div>
+      <a href="#fifth" class="nav-btn">
+        <div class="messages-02">
+          <div class="message-short">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img class="vector-wh" src="./img/wh.png" alt="vector-wh" />
+        </div>
+      </a>
+    </section>
+
+    <!-- 인스타 페이지 -->
+    <section id="fifth">
+      <article class="heading">
+        <a href="#sixth" class="nav-btn">
+          <div class="outline">
+            <div class="inner"></div>
+            <p class="more-me">"나"에 대해 더 궁금하신가요?</p>
+          </div>
+        </a>
+        <div class="total">
+          <div class="name">SUHYANG.KIM</div>
+          <div class="num">
+            <div><span>6</span><br />Posts</div>
+            <div><span>10M</span><br />Followers</div>
+            <div><span>97</span><br />Following</div>
+          </div>
+        </div>
+      </article>
+      <article class="line-icons">
+        <div>
+          <span class="material-symbols-outlined"> grid_on </span>
+          <span class="material-symbols-outlined"> account_box </span>
+        </div>
+      </article>
+      <article class="pics">
+        <div class="pic-content">
+          <a href="./index07.html" data-featherlight="iframe">
+            <img src="./img/in01.jpg" alt="in01" />
+            <p>지금의 "나"는?</p>
+          </a>
+          <a href="./index05.html" data-featherlight="iframe">
+            <img src="./img/in02.jpg" alt="in02" />
+            <p>여가를 ♡하는 사람</p>
+          </a>
+          <a href="./index04.html" data-featherlight="iframe">
+            <img src="./img/in03.jpg" alt="in03" />
+            <p>목표가 있는 사람</p>
+          </a>
+          <a href="./index03.html" data-featherlight="iframe">
+            <img src="./img/in04.jpg" alt="in04" />
+            <p>건축 디자이너</p>
+          </a>
+          <a href="./index02.html" data-featherlight="iframe">
+            <img src="./img/in05.jpg" alt="in05" />
+            <p>메이크업 아티스트</p>
+          </a>
+          <a href="./index06.html" data-featherlight="iframe">
+            <img src="./img/in06.jpg" alt="in06" />
+            <p>"나"를 소개합니다!</p>
+          </a>
+        </div>
+      </article>
+      <article class="bottom-bar">
+        <ul>
+          <li>
+            <span class="material-symbols-outlined"> home </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined"> search </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined"> add </span>
+          </li>
+          <li class="like"></li>
+          <li>
+            <div class="outline">
+              <div class="inner"></div>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 말풍선 페이지 02 -->
+    <section id="sixth">
+      <div class="emoji">
+        <img class="emo-img" src="./img/e2.png" alt="emo1" />
+        <div class="messages-01">
+          <img class="vector-wh" src="./img/wh.png" alt="vector-wh" />
+          <article class="message-long">
+            <div>
+              그럼 <span>"나"</span>는 <br />다양한 경험을 하며<br />무엇을
+              배웠나요?
+            </div>
+          </article>
+        </div>
+      </div>
+      <a href="#seventh" class="nav-btn">
+        <div class="messages-02">
+          <div class="message-short">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img class="vector-wh" src="./img/wh.png" alt="vector-wh" />
+        </div>
+      </a>
+    </section>
+
+    <!-- 경험 페이지 -->
+    <section id="seventh">
+      <div class="container">
+        <div class="square">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div>
+            <h2>No.1</h2>
+            <p>의미없는 경험은 없다.</p>
+          </div>
+        </div>
+        <div class="square">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div>
+            <h2>No.2</h2>
+            <p>
+              나에게 노력이란?<br />열심히 하는 것이 아닌<br />잘하게 만드는 것
+            </p>
+          </div>
+        </div>
+        <div class="square">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div>
+            <h2>No.3</h2>
+            <p>현재에 상황에서<br />최선의 결과를 내자</p>
+          </div>
+        </div>
+      </div>
+      <div class="click-me">
+        <a href="#ninth" class="nav-btn">Click me</a>
+      </div>
+    </section>
+
+    <!-- 결론 페이지 -->
+    <section id="ninth">
+      <h1>
+        다양한 경험을 바탕으로 끝없는 발전과 확신을 가지는<br />프론트엔드
+        개발자가 되겠습니다!
+      </h1>
+      <article>
+        <div><img src="./img/pj1.png" alt="pj1" /></div>
+        <div><img src="./img/pj2.png" alt="pj2" /></div>
+        <div><img src="./img/pj3.png" alt="pj3" /></div>
+      </article>
+    </section>
+
+    <!-- contact page -->
+    <section id="eleventh">
+      <div class="last-pics">
+        <div id="left" class="fa-solid fa-chevron-left arrow"></div>
+        <div id="right" class="fa-solid fa-chevron-right arrow"></div>
+      </div>
+      <div class="last-text">
+        <h1>Contact</h1>
+        <p><i class="fa-solid fa-envelope"></i>yooyootea1166@gmail.com</p>
+        <p><i class="fa-solid fa-mobile-screen"></i>010-4095-1455</p>
+        <p><i class="fa-brands fa-github"></i>https://github.com/suhyang1166</p>
+      </div>
+    </section>
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+
+    <!-- Top btn -->
+    <a class="gototop" href="#">
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+  </body>
+</html>

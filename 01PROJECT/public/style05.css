@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: gm B;
+  src: url(./font/GmarketSansTTFBold.ttf);
+}
+@font-face {
+  font-family: gm M;
+  src: url(./font/GmarketSansTTFMedium.ttf);
+}
+@font-face {
+  font-family: gm L;
+  src: url(./font/GmarketSansTTFLight.ttf);
+}
+/* common */
+body {
+  font-family: gm L;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  background: #000;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.cursor {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: all 0.05s;
+  z-index: 110;
+}
+
+/* hobby page */
+#hobby {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+#hobby .img-first {
+  width: 1280px;
+  height: 100vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#hobby .img-first .outline {
+  width: 1280px;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#hobby .img-first .outline .img01 {
+  width: 100%;
+  height: 340px;
+  display: grid;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+#hobby .img-first .outline .img01 p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 340px;
+  line-height: 340px;
+}
+#hobby .img-first .outline .img01 img {
+  width: 950px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  filter: saturate(10%);
+  transition: all 0.3s;
+}
+#hobby .img-first .outline .img01 img:hover {
+  filter: saturate(100%);
+  transform: scale(1.05);
+}
+#hobby .img-first .outline .img01 img:nth-of-type(1) {
+  left: -450px;
+}
+#hobby .img-first .outline .img01 img:nth-of-type(2) {
+  left: 540px;
+  width: 300px;
+}
+#hobby .img-first .outline div {
+  width: 1280px;
+  height: 280px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  margin: 30px auto;
+  text-align: right;
+  letter-spacing: 3px;
+}
+#hobby .img-first .outline div .one {
+  font-size: 80px;
+  font-family: gm B;
+}
+#hobby .img-first .outline div .two {
+  font-size: 80px;
+  font-family: gm B;
+  transform: rotate(180deg);
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+#hobby .img-first .outline .img02 {
+  width: 100%;
+  height: 340px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#hobby .img-first .outline .img02 img {
+  width: 950px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  filter: saturate(10%);
+  transition: all 0.3s;
+}
+#hobby .img-first .outline .img02 img:hover {
+  filter: saturate(100%);
+  transform: scale(1.05);
+}
+#hobby .img-first .outline .img02 img:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  filter: saturate(100%);
+}
+#hobby .img-first .outline .img02 img:nth-of-type(2) {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: -450px;
+}
+#hobby .img-second {
+  width: 100%;
+  height: 100vh;
+  margin-top: 300px;
+  position: relative;
+}
+#hobby .img-second .full-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+#hobby .img-second .full-img div {
+  width: 1280px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#hobby .img-second .full-img div h1 {
+  font-size: 60px;
+  font-family: gm b;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  margin-bottom: 50px;
+}
+#hobby .img-second .full-img div h3 {
+  font-size: 20px;
+  font-family: gm b;
+  margin-bottom: 50px;
+}
+#hobby .img-second .full-img div p {
+  font-size: 20px;
+  font-family: gm L;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+#hobby .img-second img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(1) blur(3px);
+}
+
+.close {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  position: fixed;
+  left: 100px;
+  bottom: 100px;
+  background: #fff;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  color: #000;
+  font-size: 24px;
+  z-index: 50;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+  #hobby {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #hobby .img-first {
+    width: 100%;
+    height: 100%;
+  }
+  #hobby .img-first .outline {
+    width: 100%;
+    height: 100%;
+  }
+  #hobby .img-first .outline .img01 {
+    width: 1000px;
+    height: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  #hobby .img-first .outline .img01 p {
+    display: none;
+  }
+  #hobby .img-first .outline .img01 img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    filter: saturate(10%);
+    transition: all 0.3s;
+  }
+  #hobby .img-first .outline .img01 img:hover {
+    filter: saturate(100%);
+    transform: scale(1.05);
+  }
+  #hobby .img-first .outline .img01 img:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;
+    box-shadow: 0 0 3px #fff;
+  }
+  #hobby .img-first .outline .img01 img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    left: 510px;
+  }
+  #hobby .img-first .outline div {
+    width: 100%;
+    height: 280px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    text-align: right;
+    letter-spacing: 3px;
+  }
+  #hobby .img-first .outline div .one {
+    font-size: 50px;
+    font-family: gm B;
+  }
+  #hobby .img-first .outline div .two {
+    font-size: 50px;
+    font-family: gm B;
+    transform: rotate(180deg);
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+  }
+  #hobby .img-first .outline .img02 {
+    width: 1000px;
+    height: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  #hobby .img-first .outline .img02 img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    filter: saturate(10%);
+    transition: all 0.3s;
+  }
+  #hobby .img-first .outline .img02 img:hover {
+    filter: saturate(100%);
+    transform: scale(1.05);
+  }
+  #hobby .img-first .outline .img02 img:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    right: 330px;
+    filter: saturate(100%);
+    width: 480px;
+  }
+  #hobby .img-first .outline .img02 img:nth-of-type(1):hover {
+    filter: saturate(100%);
+    transform: scale(1.05);
+  }
+  #hobby .img-first .outline .img02 img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #hobby .img-second {
+    width: 100%;
+    height: 100vh;
+    margin-top: 150px;
+    position: relative;
+  }
+  #hobby .img-second .full-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #hobby .img-second .full-img div {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #hobby .img-second .full-img div h1 {
+    font-size: 40px;
+    font-family: gm b;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    margin-bottom: 50px;
+  }
+  #hobby .img-second .full-img div h3 {
+    font-size: 16px;
+    font-family: gm b;
+    margin-bottom: 50px;
+  }
+  #hobby .img-second .full-img div p {
+    font-size: 18px;
+    font-family: gm L;
+    line-height: 30px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #hobby .img-second img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: grayscale(1) blur(5px);
+  }
+  .close {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    background: #fff;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    color: #000;
+    font-size: 24px;
+    z-index: 50;
+  }
+}
+/* mobile */
+@media screen and (max-width: 768px) {
+  #hobby {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #hobby .img-first {
+    width: 100%;
+    height: 100%;
+  }
+  #hobby .img-first .outline {
+    width: 100%;
+    height: 100%;
+  }
+  #hobby .img-first .outline .img01 {
+    width: 360px;
+    height: 150px;
+    position: relative;
+    grid-gap: 20px;
+    top: 70px;
+    right: 0;
+  }
+  #hobby .img-first .outline .img01 p {
+    display: none;
+  }
+  #hobby .img-first .outline .img01 img {
+    width: 200px;
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+    filter: saturate(10%);
+    transition: all 0.3s;
+  }
+  #hobby .img-first .outline .img01 img:hover {
+    filter: saturate(100%);
+    transform: scale(1.05);
+  }
+  #hobby .img-first .outline .img01 img:nth-of-type(1) {
+    position: static;
+    width: 400px;
+  }
+  #hobby .img-first .outline .img01 img:nth-of-type(2) {
+    position: static;
+    width: 200px;
+  }
+  #hobby .img-first .outline div {
+    width: 360px;
+    height: 300px;
+    grid-gap: 5px;
+    text-align: right;
+    letter-spacing: 1px;
+    margin: 0 auto;
+  }
+  #hobby .img-first .outline div .one {
+    font-size: 30px;
+    font-family: gm B;
+    margin-top: 10px;
+  }
+  #hobby .img-first .outline div .two {
+    font-size: 30px;
+    font-family: gm B;
+  }
+  #hobby .img-first .outline .img02 {
+    width: 360px;
+    height: 150px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    grid-gap: 20px;
+    top: -50px;
+    left: 0;
+  }
+  #hobby .img-first .outline .img02 img {
+    width: 200px;
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+    filter: saturate(10%);
+    transition: all 0.3s;
+  }
+  #hobby .img-first .outline .img02 img:hover {
+    filter: saturate(100%);
+    transform: scale(1.05);
+  }
+  #hobby .img-first .outline .img02 img:nth-of-type(1) {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 200px;
+    filter: saturate(10%);
+  }
+  #hobby .img-first .outline .img02 img:nth-of-type(2) {
+    position: static;
+    top: 0;
+    right: 0;
+    width: 400px;
+    filter: saturate(100%);
+  }
+  #hobby .img-second {
+    width: 100%;
+    height: 100vh;
+    margin-top: 150px;
+    position: relative;
+  }
+  #hobby .img-second .full-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #hobby .img-second .full-img div {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0 auto;
+  }
+  #hobby .img-second .full-img div h1 {
+    font-size: 30px;
+    font-family: gm b;
+    margin-bottom: 30px;
+  }
+  #hobby .img-second .full-img div h3 {
+    font-size: 12px;
+    font-family: gm b;
+    margin-bottom: 30px;
+  }
+  #hobby .img-second .full-img div p {
+    font-size: 14px;
+    font-family: gm L;
+    line-height: 24px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #hobby .img-second img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: grayscale(1) blur(5px);
+  }
+  .close {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    background: #fff;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 50%;
+    color: #000;
+    z-index: 50;
+  }
+}/*# sourceMappingURL=style05.css.map */

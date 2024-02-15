@@ -1,0 +1,12 @@
+@font-face {
+  font-family: gm B;
+  src: url(./font/GmarketSansTTFBold.ttf);
+}
+@font-face {
+  font-family: gm M;
+  src: url(./font/GmarketSansTTFMedium.ttf);
+}
+@font-face {
+  font-family: gm L;
+  src: url(./font/GmarketSansTTFLight.ttf);
+}/*# sourceMappingURL=font.css.map */
