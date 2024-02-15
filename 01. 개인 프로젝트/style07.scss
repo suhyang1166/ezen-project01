@@ -95,7 +95,7 @@ body {
     height: 100%;
     .pic-content {
       width: 900px;
-      height: 810px;
+      height: 900px;
       object-fit: cover;
       // border: 1px solid #f00;
       display: flex;
@@ -419,7 +419,7 @@ body {
       height: 100%;
       .pic-content {
         width: inherit;
-        height: 450px;
+        height: 400px;
       }
       .text-content {
         // border: 1px solid #f00;
@@ -508,6 +508,124 @@ body {
             line-height: 30px;
             font-size: 12px;
           }
+        }
+      }
+      .text-up {
+        font: {
+          size: 22px;
+          family: gm L;
+        }
+        margin-top: 40px;
+        cursor: pointer;
+        &.active {
+          display: none;
+        }
+      }
+      #container {
+        width: 360px;
+        display: grid;
+        justify-content: flex-start;
+        align-items: start;
+        grid-template-columns: repeat(1, 1fr);
+        display: none;
+        p {
+          font: {
+            family: gm L;
+            size: 24px;
+          }
+        }
+        form {
+          width: 360px;
+          // border: 1px solid #f00;
+          overflow: hidden;
+          #textInfo {
+            margin-top: 10px;
+            color: #fff;
+            overflow: hidden;
+            li {
+              padding-bottom: 20px;
+              overflow: hidden;
+              font: {
+                size: 20px;
+                family: gm L;
+              }
+              label {
+                display: inline-block;
+                width: 70px;
+              }
+              input {
+                display: inline-block;
+                width: 360px;
+                padding: 5px;
+                border: none;
+                border-bottom: 1px solid #ddd;
+                background: transparent;
+                color: #fff;
+                &:focus {
+                  color: #fff;
+                  outline: none;
+                }
+              }
+            }
+          }
+          #reset,
+          #save {
+            display: inline-block;
+            font-family: gm B;
+            width: 80px;
+            padding: 5px 10px;
+            background: #000;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover {
+              background: #fff;
+              color: #000;
+            }
+          }
+        }
+        #textlist {
+          width: 360px;
+          margin-top: 20px;
+          position: relative;
+          margin: 0 auto;
+          overflow: hidden;
+          li {
+            display: block;
+            width: 100px;
+            height: 20px;
+            margin-bottom: 10px;
+            // border: 1px solid #f00;
+            .delButton {
+              cursor: pointer;
+              position: absolute;
+              right: 0;
+              font-family: gm B;
+              width: 80px;
+              padding: 5px 10px;
+              background: #000;
+              color: #fff;
+              border: 1px solid #fff;
+              border-radius: 10px;
+              margin: 3px;
+              &:hover {
+                background: #fff;
+                color: #000;
+              }
+            }
+          }
+        }
+        &.active {
+          display: block;
+        }
+      }
+      p {
+        span {
+          font-family: gm M;
+          line-height: 50px;
+          font-size: 18px;
+          margin-top: 30px;
         }
       }
       .bottom-bar {

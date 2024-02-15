@@ -102,7 +102,7 @@ body {
 }
 #selfintro .pics .pic-content {
   width: 900px;
-  height: 810px;
+  height: 900px;
   -o-object-fit: cover;
      object-fit: cover;
   display: flex;
@@ -309,7 +309,7 @@ body {
   }
   #selfintro .pics .pic-content {
     width: inherit;
-    height: 450px;
+    height: 400px;
   }
   #selfintro .pics .text-content {
     padding: 10px;

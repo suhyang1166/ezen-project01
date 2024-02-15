@@ -340,6 +340,10 @@ body {
             right: 330px;
             filter: saturate(100%);
             width: 480px;
+            &:hover {
+              filter: saturate(100%);
+              transform: scale(1.05);
+            }
           }
           img:nth-of-type(2) {
             position: absolute;

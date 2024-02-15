@@ -102,7 +102,7 @@ body {
 }
 #selfintro .pics .pic-content {
   width: 900px;
-  height: 810px;
+  height: 900px;
   -o-object-fit: cover;
      object-fit: cover;
   display: flex;
@@ -399,7 +399,7 @@ body {
   }
   #selfintro .pics .pic-content {
     width: inherit;
-    height: 450px;
+    height: 400px;
   }
   #selfintro .pics .text-content {
     padding: 10px;
@@ -479,6 +479,115 @@ body {
     font-family: gm M;
     line-height: 30px;
     font-size: 12px;
+  }
+  #selfintro .pics .text-up {
+    font-size: 22px;
+    font-family: gm L;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+  #selfintro .pics .text-up.active {
+    display: none;
+  }
+  #selfintro .pics #container {
+    width: 360px;
+    display: grid;
+    justify-content: flex-start;
+    align-items: start;
+    grid-template-columns: repeat(1, 1fr);
+    display: none;
+  }
+  #selfintro .pics #container p {
+    font-family: gm L;
+    font-size: 24px;
+  }
+  #selfintro .pics #container form {
+    width: 360px;
+    overflow: hidden;
+  }
+  #selfintro .pics #container form #textInfo {
+    margin-top: 10px;
+    color: #fff;
+    overflow: hidden;
+  }
+  #selfintro .pics #container form #textInfo li {
+    padding-bottom: 20px;
+    overflow: hidden;
+    font-size: 20px;
+    font-family: gm L;
+  }
+  #selfintro .pics #container form #textInfo li label {
+    display: inline-block;
+    width: 70px;
+  }
+  #selfintro .pics #container form #textInfo li input {
+    display: inline-block;
+    width: 360px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    color: #fff;
+  }
+  #selfintro .pics #container form #textInfo li input:focus {
+    color: #fff;
+    outline: none;
+  }
+  #selfintro .pics #container form #reset,
+  #selfintro .pics #container form #save {
+    display: inline-block;
+    font-family: gm B;
+    width: 80px;
+    padding: 5px 10px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #selfintro .pics #container form #reset:hover,
+  #selfintro .pics #container form #save:hover {
+    background: #fff;
+    color: #000;
+  }
+  #selfintro .pics #container #textlist {
+    width: 360px;
+    margin-top: 20px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #selfintro .pics #container #textlist li {
+    display: block;
+    width: 100px;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+  #selfintro .pics #container #textlist li .delButton {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    font-family: gm B;
+    width: 80px;
+    padding: 5px 10px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 3px;
+  }
+  #selfintro .pics #container #textlist li .delButton:hover {
+    background: #fff;
+    color: #000;
+  }
+  #selfintro .pics #container.active {
+    display: block;
+  }
+  #selfintro .pics p span {
+    font-family: gm M;
+    line-height: 50px;
+    font-size: 18px;
+    margin-top: 30px;
   }
   #selfintro .pics .bottom-bar {
     width: 360px;
