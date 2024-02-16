@@ -54,15 +54,15 @@ phone.addEventListener("click", function (event) {
   if (!isClicked) {
     isClicked = true;
     textAni(textArr.slice());
-    event.stopPropagation();
+    // event.stopPropagation();
 
     // a 태그 좌표로 이동하는 부분 추가
-    const targetId = document.querySelector("#third-move");
-    const targetElement = document.getElementById(targetId);
+    // const targetId = document.querySelector("#third-move");
+    // const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
+    // if (targetElement) {
+    //   targetElement.scrollIntoView({ behavior: "smooth" });
+    // }
   }
 });
 
